@@ -3,6 +3,15 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const startApp = () => {
+  // get token
+  // save token
+  // call api
+
+  new Vue({
+    render: h => h(App),
+  }).$mount('#app')
+}
+
+
+startApp();

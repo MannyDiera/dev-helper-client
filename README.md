@@ -1,9 +1,10 @@
-# sm-sample
+# Dev Helper
 
-### This is a sample project to demonstrate creating wizards and other defined states using state machines with XState.
+This is a sample project to demonstrate creating wizards and other defined states using state machines with XState.
 
-### The Editor section of this app is from this article: https://frontstuff.io/using-state-machines-in-vuejs-with-xstate
+The Editor section of this app is from this article: https://frontstuff.io/using-state-machines-in-vuejs-with-xstate
 
+### Why State Machines ? 
 The idea is to remove the need to add boolean checks in our templates and instead rely on finite state machines.
 
 This way we can declare the only available states of a process/flow and reduce the amount of possible bugs.
@@ -13,7 +14,7 @@ Another great thing about Xstate is that it provides a [visualizer](https://xsta
 This tool allows us to visualize the application states and this can be reviewed with users before coding the feature.
 
 
-#### State Machines
+#### State Machines Setup
 There are 3 basic items each state machine needs.
 -An initial state
 -An object containing available states

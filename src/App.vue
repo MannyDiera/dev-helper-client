@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <NavBar/>
     <Editor/>
   </div>
 </template>
 
 <script>
 import Editor from '@/views/Editor';
+import NavBar from './components/NavBar/NavBar';
 
 export default {
   name: 'App',
   components: {
+    NavBar,
     Editor
   }
 }
