@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Editor from '../views/Editor';
 
 Vue.use(VueRouter)
 
@@ -14,15 +13,25 @@ const routes = [
   {
     path: '/editor',
     name: 'Editor',
-    component: Editor
+    component: () => import('../views/Editor/Editor.vue')
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/vulnerabilities',
+    name: 'Vulnerabilities',
+    component: () => import('../views/Vulnerabilities/Vulnerabilities.vue')
+  },
+  {
+    path: '/forum',
+    name: 'Forum',
+    component: () => import('../views/Forum/Forum.vue')
+  },
+  {
+    path: '/wiki',
+    name: 'Wiki',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Wiki/Wiki.vue')
   }
 ]
 

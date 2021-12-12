@@ -1,8 +1,11 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/editor">Editor</router-link>
+    <div class="nav-item" v-for="(route, index) in allRoutes" :key="index">
+      <span v-if="index > 0"> | </span>
+      <router-link :to="route.path">
+         {{ route.name }}
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -12,9 +15,25 @@ export default {
   data: () => ({
     currentUser: 'MannyD'
   }),
+  computed: {
+    allRoutes() {
+      return this.$router.options.routes;
+    }
+  }
 };
 </script>
 
 <style scoped>
-
+#nav .nav-item {
+  display: inline-block;
+}
+#nav a {
+  font-weight: bold;
+  color: var(--link-color);
+  text-decoration: none;
+  margin: auto 4px;
+}
+#nav a.router-link-exact-active {
+  color: var(--link-active);
+}
 </style>

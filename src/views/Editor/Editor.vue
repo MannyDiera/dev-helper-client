@@ -96,7 +96,6 @@ body {
 
 .editor {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   background: #1d1f2f;
   border: none;
@@ -106,7 +105,6 @@ body {
 }
 
 .editor,.render {
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 50vw;
   height: 100vh;
@@ -119,9 +117,8 @@ body {
 .render {
   overflow: scroll;
   -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  color: #1a1b26;
+  color: var(--font-color);
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif
 }
 
@@ -182,7 +179,6 @@ body {
 
   .editor,.render {
     -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     width: 100vw;
     height: 50vh
@@ -206,7 +202,6 @@ body {
 }
 
 .markdown-body strong {
-  font-weight: inherit;
   font-weight: bolder
 }
 
