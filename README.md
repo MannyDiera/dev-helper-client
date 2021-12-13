@@ -1,6 +1,24 @@
 # Dev Helper
 
-This is a sample project to demonstrate creating wizards and other defined states using state machines with XState.
+This is a small utility project intended to be used by developers on a daily basis. 
+
+When planning this tool, I thoought about tools that I use on a daily basis and how they are scattered online in different urls. Below is a list of proposed items to be added to this project.
+
+- Markdown Editor - To take notes
+- JSON to JS Object converter
+- The latest on vulnerability news and how to resolve these issues.
+- etc.
+
+
+On another note, this project is also intended to be a learning playground and it will be using tooling and techniques that devs may want to play with but not have the time for. 
+
+Below are these tools/techniques the project uses.
+
+## Animations with LottieFiles
+[LottieFiles from Airbnb](https://lottiefiles.com/)
+
+## State Machines with XState
+[XState](https://xstate.js.org/docs/)
 
 The Editor section of this app is from this article: https://frontstuff.io/using-state-machines-in-vuejs-with-xstate
 
