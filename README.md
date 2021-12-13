@@ -61,5 +61,16 @@ npm run test:e2e
 npm run lint
 ```
 
+### Docker
+```
+# build image
+docker build -t dev-helper-client .
+
+# run container
+docker run -it --name dev-helper \
+-p 8086:80 \
+dev-helper-client
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

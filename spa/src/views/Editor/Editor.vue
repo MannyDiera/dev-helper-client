@@ -1,16 +1,19 @@
 <template>
-  <div class="editor-wrapper container">
-    <textarea v-model="content" aria-label="Type your Markdown here" class="editor"/>
-    <div v-show="current.matches('visible.rendered')" v-html="rendered" class="render markdown-body"/>
-    <pre v-show="current.matches('visible.raw')" class="render raw">{{ raw }}</pre>
+  <div class="editor-wrapper">
+    <h1>Editor</h1>
+    <div class="container">
+      <textarea v-model="content" aria-label="Type your Markdown here" class="editor"/>
+      <div v-show="current.matches('visible.rendered')" v-html="rendered" class="render markdown-body"/>
+      <pre v-show="current.matches('visible.raw')" class="render raw">{{ raw }}</pre>
 
-    <div class="toggle">
-      <button v-show="current.matches('visible')" @click="send('SWITCH')" class="btn">
-        {{ current.matches('visible.raw') ? 'Show rendered Markdown' : 'Show HTML code' }}
-      </button>
-      <button @click="send('TOGGLE')" class="btn">
-        {{ current.matches('hidden') ? 'Show preview' : 'Hide preview' }}
-      </button>
+      <div class="toggle">
+        <button v-show="current.matches('visible')" @click="send('SWITCH')" class="btn">
+          {{ current.matches('visible.raw') ? 'Show rendered Markdown' : 'Show HTML code' }}
+        </button>
+        <button @click="send('TOGGLE')" class="btn">
+          {{ current.matches('hidden') ? 'Show preview' : 'Hide preview' }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -72,18 +75,6 @@ export default {
   -webkit-box-shadow: 0 0 0 2px #336ba3,0 0 0 6px rgba(180,222,243,.75);
   box-shadow: 0 0 0 2px #336ba3,0 0 0 6px rgba(180,222,243,.75)
 }
-
-body {
-  margin: 0
-}
-
-#app {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;

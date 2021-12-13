@@ -28,6 +28,7 @@ export default {
   height: 100vh;
   width: 100vw;
   padding: 24px;
+  position: relative;
   overflow: hidden;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
